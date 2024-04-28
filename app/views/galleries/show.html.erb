@@ -1,0 +1,10 @@
+<h1><%= @gallery.title %></h1>
+<div class="row">
+  <% @gallery.images.each do |image| %>
+    <div class="col-md-4">
+      <div class="card mb-4 box-shadow">
+        <img class="card-img-top" src="<%= image.url %>" alt="Imagem">
+      </div>
+    </div>
+  <% end %>
+</div>

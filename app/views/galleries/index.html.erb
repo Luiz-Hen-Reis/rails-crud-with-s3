@@ -1,0 +1,9 @@
+<h1>Galerias de <%= @user.email %></h1>
+<ul>
+  <% @galleries.each do |gallery| %>
+    <li>
+        <%= link_to gallery.title, gallery_path(gallery) %>
+        <%= button_to "Excluir", gallery_path(gallery), method: :delete, data: { confirm: "Tem certeza que deseja excluir esta galeria?" } %>
+    </li>
+  <% end %>
+</ul>

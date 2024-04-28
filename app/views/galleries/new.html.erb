@@ -1,0 +1,10 @@
+<h1>Adicionar nova categoria</h1>   
+
+<div>
+  <%= form_with model: @gallery, url: galleries_path, method: :post, html: { multipart: true } do |form| %>
+    <%= form.label :title, "Título:" %>
+    <%= form.text_field :title %>
+    <%= form.file_field :images, multiple: true %>
+    <%= form.submit "Criar Nova Galeria" %>
+  <% end %>
+</div>
